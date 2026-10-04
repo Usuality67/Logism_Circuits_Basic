@@ -57,6 +57,145 @@
     <a name="circuit" val="main"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
+    <comp lib="0" loc="(140,110)" name="Pin">
+      <a name="appearance" val="classic"/>
+    </comp>
+    <comp lib="0" loc="(140,150)" name="Pin">
+      <a name="appearance" val="classic"/>
+    </comp>
+    <comp lib="0" loc="(140,310)" name="Pin">
+      <a name="appearance" val="classic"/>
+    </comp>
+    <comp lib="0" loc="(140,350)" name="Pin">
+      <a name="appearance" val="classic"/>
+    </comp>
+    <comp lib="0" loc="(140,390)" name="Pin">
+      <a name="appearance" val="classic"/>
+    </comp>
+    <comp lib="0" loc="(140,80)" name="Pin">
+      <a name="appearance" val="classic"/>
+    </comp>
+    <comp loc="(470,620)" name="Three_bit_adder"/>
+    <comp loc="(640,330)" name="Two_Bit_Adder"/>
+  </circuit>
+  <circuit name="Four_Bit_Adder">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="Four_Bit_Adder"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <comp lib="0" loc="(1040,190)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="S4"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp lib="0" loc="(1330,240)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="S8"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp lib="0" loc="(140,120)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="A"/>
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="0" loc="(140,270)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="B"/>
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="0" loc="(1590,360)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="S16"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp lib="0" loc="(220,270)" name="Splitter">
+      <a name="bit1" val="0"/>
+      <a name="bit2" val="1"/>
+      <a name="bit3" val="1"/>
+      <a name="incoming" val="4"/>
+      <a name="spacing" val="2"/>
+    </comp>
+    <comp lib="0" loc="(240,120)" name="Splitter">
+      <a name="bit1" val="0"/>
+      <a name="bit2" val="1"/>
+      <a name="bit3" val="1"/>
+      <a name="incoming" val="4"/>
+      <a name="spacing" val="2"/>
+    </comp>
+    <comp lib="0" loc="(730,100)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="S1"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp lib="0" loc="(730,120)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="S2"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp lib="9" loc="(1028,112)" name="Text">
+      <a name="text" val="S1 and S2 produced by adding the bit 0 and bit 1 from A and B"/>
+    </comp>
+    <comp lib="9" loc="(1488,444)" name="Text">
+      <a name="text" val="S16 produced by summing the carry produced by sumuation of Bit 2 and Bit 3 of A and B, and the carry produced during the S8 production"/>
+    </comp>
+    <comp lib="9" loc="(1542,168)" name="Text">
+      <a name="text" val="S4 produced by adding the carry ,produced by S1 and S2 sum, with the Sum bit 1 produced by summing the bit 2 from A and B"/>
+    </comp>
+    <comp lib="9" loc="(1746,214)" name="Text">
+      <a name="text" val="S8 produced in a similar fashion as S4, just the carry used is of S4 sum, and the other bit is the result of adding bit 3 of A and B."/>
+    </comp>
+    <comp lib="9" loc="(274,406)" name="Text">
+      <a name="text" val="Adding bit 2 and bit 3, by first splitting the 4 bit input into two 2 bit sets"/>
+    </comp>
+    <comp lib="9" loc="(496,52)" name="Text">
+      <a name="text" val="Adding bit 0 and 1 , by first splitting the 4 bit input into two 2 bits sets."/>
+    </comp>
+    <comp loc="(1290,240)" name="Half_Adder"/>
+    <comp loc="(1560,360)" name="Half_Adder"/>
+    <comp loc="(700,100)" name="Two_Bit_Adder_Variation"/>
+    <comp loc="(700,300)" name="Two_Bit_Adder_Variation"/>
+    <comp loc="(990,190)" name="Half_Adder"/>
+    <wire from="(1040,210)" to="(1040,240)"/>
+    <wire from="(1040,240)" to="(1070,240)"/>
+    <wire from="(1050,260)" to="(1050,310)"/>
+    <wire from="(1050,260)" to="(1070,260)"/>
+    <wire from="(1280,340)" to="(1280,380)"/>
+    <wire from="(1280,380)" to="(1340,380)"/>
+    <wire from="(1290,240)" to="(1330,240)"/>
+    <wire from="(1290,260)" to="(1310,260)"/>
+    <wire from="(1310,260)" to="(1310,360)"/>
+    <wire from="(1310,360)" to="(1340,360)"/>
+    <wire from="(140,120)" to="(240,120)"/>
+    <wire from="(140,270)" to="(220,270)"/>
+    <wire from="(1560,360)" to="(1590,360)"/>
+    <wire from="(1560,380)" to="(1580,380)"/>
+    <wire from="(240,240)" to="(480,240)"/>
+    <wire from="(240,260)" to="(480,260)"/>
+    <wire from="(260,110)" to="(260,320)"/>
+    <wire from="(260,320)" to="(480,320)"/>
+    <wire from="(260,90)" to="(480,90)"/>
+    <wire from="(480,120)" to="(480,240)"/>
+    <wire from="(480,260)" to="(480,300)"/>
+    <wire from="(480,90)" to="(480,100)"/>
+    <wire from="(700,100)" to="(730,100)"/>
+    <wire from="(700,120)" to="(730,120)"/>
+    <wire from="(700,140)" to="(740,140)"/>
+    <wire from="(700,300)" to="(730,300)"/>
+    <wire from="(700,320)" to="(730,320)"/>
+    <wire from="(700,340)" to="(1280,340)"/>
+    <wire from="(730,210)" to="(730,300)"/>
+    <wire from="(730,210)" to="(770,210)"/>
+    <wire from="(730,310)" to="(1050,310)"/>
+    <wire from="(730,310)" to="(730,320)"/>
+    <wire from="(740,140)" to="(740,190)"/>
+    <wire from="(740,190)" to="(770,190)"/>
+    <wire from="(990,190)" to="(1040,190)"/>
+    <wire from="(990,210)" to="(1040,210)"/>
   </circuit>
   <circuit name="Half_Adder">
     <a name="appearance" val="logisim_evolution"/>
@@ -233,12 +372,6 @@
     <wire from="(90,690)" to="(90,920)"/>
     <wire from="(90,920)" to="(320,920)"/>
   </circuit>
-  <circuit name="Full_adder_variations">
-    <a name="appearance" val="logisim_evolution"/>
-    <a name="circuit" val="Full_adder_variations"/>
-    <a name="circuitnamedboxfixedsize" val="true"/>
-    <a name="simulationFrequency" val="1.0"/>
-  </circuit>
   <circuit name="XOR_Gate">
     <a name="appearance" val="logisim_evolution"/>
     <a name="circuit" val="XOR_Gate"/>
@@ -414,21 +547,256 @@
     <wire from="(530,200)" to="(600,200)"/>
     <wire from="(530,70)" to="(530,200)"/>
   </circuit>
-  <circuit name="Four_Bit_Adder">
-    <a name="appearance" val="logisim_evolution"/>
-    <a name="circuit" val="Four_Bit_Adder"/>
-    <a name="circuitnamedboxfixedsize" val="true"/>
-    <a name="simulationFrequency" val="1.0"/>
-  </circuit>
   <circuit name="Two_Bit_Adder">
     <a name="appearance" val="logisim_evolution"/>
     <a name="circuit" val="Two_Bit_Adder"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
-    <comp lib="0" loc="(260,190)" name="Pin">
+    <comp lib="0" loc="(1190,90)" name="Pin">
       <a name="appearance" val="classic"/>
-      <a name="label" val="Two"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="S4"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp lib="0" loc="(160,180)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="A"/>
       <a name="width" val="2"/>
     </comp>
+    <comp lib="0" loc="(160,240)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="B"/>
+      <a name="width" val="2"/>
+    </comp>
+    <comp lib="0" loc="(200,180)" name="Splitter">
+      <a name="spacing" val="2"/>
+    </comp>
+    <comp lib="0" loc="(230,240)" name="Splitter">
+      <a name="spacing" val="2"/>
+    </comp>
+    <comp lib="0" loc="(650,150)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="S1"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp lib="0" loc="(990,450)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="S2"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp lib="1" loc="(1020,330)" name="XOR Gate"/>
+    <comp lib="9" loc="(1020,290)" name="Text">
+      <a name="text" val="Bit 3"/>
+    </comp>
+    <comp lib="9" loc="(190,145)" name="Text">
+      <a name="text" val="Inputting the first bits of both the numbers"/>
+    </comp>
+    <comp lib="9" loc="(190,315)" name="Text">
+      <a name="text" val="Inputting the second bits of all the numbers"/>
+    </comp>
+    <comp lib="9" loc="(590,110)" name="Text">
+      <a name="text" val="Bit 1"/>
+    </comp>
+    <comp lib="9" loc="(780,570)" name="Text">
+      <a name="text" val="Summed the carries produced by the: sumation of first and second bits, and the sumation of second bits ."/>
+    </comp>
+    <comp lib="9" loc="(875,180)" name="Text">
+      <a name="text" val="The carry of the first bits , summed with the sum of the second bits"/>
+    </comp>
+    <comp lib="9" loc="(960,430)" name="Text">
+      <a name="text" val="Bit 2"/>
+    </comp>
+    <comp loc="(570,150)" name="Half_Adder"/>
+    <comp loc="(580,270)" name="Half_Adder"/>
+    <comp loc="(960,450)" name="Half_Adder"/>
+    <wire from="(1020,330)" to="(1180,330)"/>
+    <wire from="(1180,90)" to="(1180,330)"/>
+    <wire from="(1180,90)" to="(1190,90)"/>
+    <wire from="(160,180)" to="(200,180)"/>
+    <wire from="(160,240)" to="(230,240)"/>
+    <wire from="(220,150)" to="(220,160)"/>
+    <wire from="(220,160)" to="(350,160)"/>
+    <wire from="(220,170)" to="(330,170)"/>
+    <wire from="(250,210)" to="(250,220)"/>
+    <wire from="(250,220)" to="(350,220)"/>
+    <wire from="(250,230)" to="(300,230)"/>
+    <wire from="(300,230)" to="(300,290)"/>
+    <wire from="(300,290)" to="(300,300)"/>
+    <wire from="(300,290)" to="(360,290)"/>
+    <wire from="(330,170)" to="(330,270)"/>
+    <wire from="(330,270)" to="(360,270)"/>
+    <wire from="(350,150)" to="(350,160)"/>
+    <wire from="(350,170)" to="(350,220)"/>
+    <wire from="(570,150)" to="(650,150)"/>
+    <wire from="(570,170)" to="(620,170)"/>
+    <wire from="(580,270)" to="(670,270)"/>
+    <wire from="(580,290)" to="(850,290)"/>
+    <wire from="(620,170)" to="(620,470)"/>
+    <wire from="(620,470)" to="(740,470)"/>
+    <wire from="(640,350)" to="(640,540)"/>
+    <wire from="(640,350)" to="(960,350)"/>
+    <wire from="(640,540)" to="(970,540)"/>
+    <wire from="(670,270)" to="(670,450)"/>
+    <wire from="(670,450)" to="(740,450)"/>
+    <wire from="(850,290)" to="(850,310)"/>
+    <wire from="(850,290)" to="(870,290)"/>
+    <wire from="(850,310)" to="(960,310)"/>
+    <wire from="(960,450)" to="(990,450)"/>
+    <wire from="(960,470)" to="(970,470)"/>
+    <wire from="(970,470)" to="(970,540)"/>
+    <wire from="(970,470)" to="(990,470)"/>
+  </circuit>
+  <circuit name="Two_Bit_Adder_Variation">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="Two_Bit_Adder_Variation"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <comp lib="0" loc="(210,200)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="A"/>
+      <a name="width" val="2"/>
+    </comp>
+    <comp lib="0" loc="(220,340)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="B"/>
+      <a name="width" val="2"/>
+    </comp>
+    <comp lib="0" loc="(250,200)" name="Splitter"/>
+    <comp lib="0" loc="(290,340)" name="Splitter"/>
+    <comp lib="0" loc="(780,230)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="S1"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp lib="0" loc="(890,500)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="S2"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp lib="0" loc="(950,550)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="S4"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp loc="(730,230)" name="Half_Adder"/>
+    <comp loc="(830,390)" name="Full_adder"/>
+    <wire from="(210,200)" to="(250,200)"/>
+    <wire from="(220,340)" to="(290,340)"/>
+    <wire from="(270,180)" to="(420,180)"/>
+    <wire from="(270,190)" to="(270,420)"/>
+    <wire from="(270,420)" to="(530,420)"/>
+    <wire from="(310,320)" to="(420,320)"/>
+    <wire from="(310,330)" to="(310,440)"/>
+    <wire from="(310,440)" to="(510,440)"/>
+    <wire from="(420,180)" to="(420,220)"/>
+    <wire from="(420,220)" to="(490,220)"/>
+    <wire from="(420,250)" to="(420,320)"/>
+    <wire from="(420,250)" to="(510,250)"/>
+    <wire from="(470,350)" to="(470,490)"/>
+    <wire from="(470,350)" to="(760,350)"/>
+    <wire from="(470,490)" to="(610,490)"/>
+    <wire from="(490,220)" to="(490,230)"/>
+    <wire from="(490,230)" to="(510,230)"/>
+    <wire from="(510,440)" to="(510,470)"/>
+    <wire from="(510,470)" to="(610,470)"/>
+    <wire from="(530,420)" to="(530,440)"/>
+    <wire from="(530,440)" to="(610,440)"/>
+    <wire from="(610,440)" to="(610,450)"/>
+    <wire from="(730,230)" to="(780,230)"/>
+    <wire from="(730,250)" to="(760,250)"/>
+    <wire from="(760,250)" to="(760,350)"/>
+    <wire from="(830,430)" to="(940,430)"/>
+    <wire from="(830,450)" to="(880,450)"/>
+    <wire from="(880,450)" to="(880,500)"/>
+    <wire from="(880,500)" to="(890,500)"/>
+    <wire from="(940,430)" to="(940,550)"/>
+    <wire from="(940,550)" to="(950,550)"/>
+  </circuit>
+  <circuit name="Three_bit_adder">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="Three_bit_adder"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <comp lib="0" loc="(140,100)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="A"/>
+      <a name="width" val="3"/>
+    </comp>
+    <comp lib="0" loc="(140,320)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="B"/>
+      <a name="width" val="3"/>
+    </comp>
+    <comp lib="0" loc="(160,90)" name="Splitter">
+      <a name="bit1" val="0"/>
+      <a name="bit2" val="1"/>
+      <a name="incoming" val="3"/>
+      <a name="spacing" val="2"/>
+    </comp>
+    <comp lib="0" loc="(190,320)" name="Splitter">
+      <a name="bit1" val="0"/>
+      <a name="bit2" val="1"/>
+      <a name="incoming" val="3"/>
+      <a name="spacing" val="2"/>
+    </comp>
+    <comp lib="0" loc="(650,130)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="S1"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp lib="0" loc="(660,170)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="S2"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp lib="0" loc="(820,380)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="S4"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp lib="0" loc="(890,430)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="S8"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp loc="(630,130)" name="Two_Bit_Adder_Variation"/>
+    <comp loc="(750,320)" name="Full_adder"/>
+    <wire from="(140,100)" to="(160,100)"/>
+    <wire from="(140,320)" to="(190,320)"/>
+    <wire from="(160,90)" to="(160,100)"/>
+    <wire from="(180,60)" to="(190,60)"/>
+    <wire from="(180,80)" to="(200,80)"/>
+    <wire from="(190,60)" to="(190,70)"/>
+    <wire from="(190,70)" to="(410,70)"/>
+    <wire from="(200,400)" to="(530,400)"/>
+    <wire from="(200,80)" to="(200,400)"/>
+    <wire from="(210,290)" to="(260,290)"/>
+    <wire from="(210,310)" to="(490,310)"/>
+    <wire from="(260,160)" to="(260,290)"/>
+    <wire from="(260,160)" to="(410,160)"/>
+    <wire from="(410,150)" to="(410,160)"/>
+    <wire from="(410,70)" to="(410,130)"/>
+    <wire from="(430,280)" to="(430,420)"/>
+    <wire from="(430,280)" to="(720,280)"/>
+    <wire from="(430,420)" to="(530,420)"/>
+    <wire from="(490,310)" to="(490,380)"/>
+    <wire from="(490,380)" to="(530,380)"/>
+    <wire from="(630,130)" to="(650,130)"/>
+    <wire from="(630,150)" to="(720,150)"/>
+    <wire from="(630,170)" to="(660,170)"/>
+    <wire from="(720,150)" to="(720,280)"/>
+    <wire from="(750,360)" to="(880,360)"/>
+    <wire from="(750,380)" to="(820,380)"/>
+    <wire from="(880,360)" to="(880,430)"/>
+    <wire from="(880,430)" to="(890,430)"/>
   </circuit>
 </project>
